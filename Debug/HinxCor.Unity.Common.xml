@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HinxCor.Unity.Common</name>
+    </assembly>
+    <members>
+        <member name="T:HinxCor.Unity.Common.MonoHelper">
+            <summary>
+            帮助类
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Common.MonoHelper.MainCamera">
+            <summary>
+            查找标签为MainCamera的Camera,若当前场景不切换,则不需要每次都找一下
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Common.MonoHelper.root">
+            <summary>
+            查找并且返回第一个tag为root的对象的变换组建
+            </summary>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.IsClose(UnityEngine.Transform,UnityEngine.Vector3,System.Single)">
+            <summary>
+            是否在范文之内（球形）
+            </summary>
+            <param name="ori"></param>
+            <param name="position"></param>
+            <param name="distance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.IsClose(UnityEngine.Transform,UnityEngine.Transform,System.Single)">
+            <summary>
+            是否在范文之内（球形）,单位 米
+            </summary>
+            <param name="ori"></param>
+            <param name="position"></param>
+            <param name="distance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.IsClose(UnityEngine.Vector3,UnityEngine.Transform,System.Single)">
+            <summary>
+            是否在范文之内（球形）,单位 米
+            </summary>
+            <param name="ori"></param>
+            <param name="position"></param>
+            <param name="distance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.LerpMiter(UnityEngine.Transform,UnityEngine.Vector3,System.Single)">
+            <summary>
+            按照步长匀速向目标移动
+            </summary>
+            <param name="ori"></param>
+            <param name="end"></param>
+            <param name="step"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Lerp(UnityEngine.Transform,UnityEngine.Vector3,System.Single)">
+            <summary>
+            按照百分比形式缩进位置
+            </summary>
+            <param name="ori"></param>
+            <param name="position"></param>
+            <param name="tp"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.LerpLocal(UnityEngine.Transform,UnityEngine.Vector3,System.Single)">
+            <summary>
+            按照百分比形式缩进位置
+            </summary>
+            <param name="ori"></param>
+            <param name="position"></param>
+            <param name="tp"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.LerpAngles(UnityEngine.Transform,UnityEngine.Vector3,System.Single)">
+            <summary>
+            按照tp将transform的欧拉角旋转至 rulerangle
+            </summary>
+            <param name="ori"></param>
+            <param name="euangles"></param>
+            <param name="tp"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Lerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+            按照tp(百分比差值)
+            </summary>
+            <param name="ori"></param>
+            <param name="destinate"></param>
+            <param name="tp"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Lerp(UnityEngine.Transform,UnityEngine.Quaternion,System.Single)">
+            <summary>
+            百分比形式缩进旋转角度
+            </summary>
+            <param name="ori"></param>
+            <param name="rotation"></param>
+            <param name="tp"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Multiple(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            若旧版Unity中vector2没有* 符号,定义Multiple方法
+            </summary>
+            <param name="ori"></param>
+            <param name="operate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Devide(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            若旧版Unity中vector3没有/ 符号,定义Devide方法
+            </summary>
+            <param name="ori"></param>
+            <param name="operate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Multiple(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            若旧版Unity中vector3没有* 符号,定义Multiple方法
+            </summary>
+            <param name="ori"></param>
+            <param name="operate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.GetChild``1(UnityEngine.Transform,System.String)">
+            <summary>
+            查找子类中第一个符合条件的组件
+            </summary>
+            <typeparam name="T">组件类型</typeparam>
+            <param name="mice">物体本身</param>
+            <param name="name">子组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.RawComponent``1(UnityEngine.GameObject)">
+            <summary>
+            检测此对象是否挂载了该脚本，若无则添加并返回，若有则获取返回
+            </summary>
+            <typeparam name="T">对象组件</typeparam>
+            <param name="gameobj">游戏物体自身</param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToSprite(UnityEngine.Texture2D)">
+            <summary>
+            转换为sprite
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToSprite(UnityEngine.Texture)">
+            <summary>
+            贴图创建Sprite
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToRevColor(UnityEngine.Color)">
+            <summary>
+            颜色方向
+            </summary>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToColor(System.Single)">
+            <summary>
+            HSV中H ToColor
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.p2Color(System.Single)">
+            <summary>
+            ab by ToColor
+            </summary>
+            <param name="p"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.GetSetOnToggle(UnityEngine.UI.ToggleGroup)">
+            <summary>
+            获取并且返回第一个打钩的Toggle,否则返回Null
+            </summary>
+            <param name="group"></param>
+            <returns>否则返回Null,有则返回Toggle</returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToUrl(System.String)">
+            <summary>
+            Warm: input string must be an full path.
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.print(System.String)">
+            <summary>
+            Unity控制台输出
+            </summary>
+            <param name="ori"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.print(System.Object)">
+            <summary>
+            Unity控制台输出
+            </summary>
+            <param name="ori"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.GetRect(UnityEngine.Transform)">
+            <summary>
+            return rectTransform of transform if transform is rectTransform
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ScreenSpaceToCanvasSpace(UnityEngine.Vector3)">
+            <summary>
+            UGUI 屏幕坐标到画布坐标，- 1/2 分辨率
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.CanvasSpaceToScreenSpace(UnityEngine.Vector3)">
+            <summary>
+            UGUI 画布坐标到 屏幕坐标，+ 1/2 sc
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToVector2(UnityEngine.Vector3)">
+            <summary>
+            ToVe2
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Clamp(UnityEngine.Color)">
+            <summary>
+            颜色规范到0-1区间
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.D_COLOR(UnityEngine.Color)">
+            <summary>
+            颜色取补
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToHexString(UnityEngine.Color)">
+            <summary>
+            RGBA颜色转为16进制显示
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.HexStringToColor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.to0xFFfx(System.Single)">
+            <summary>
+            rgba 转 #FFFFFFFF显示帮助方法
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.MaptoVe2(UnityEngine.Vector3)">
+            <summary>
+            压缩x，z平面到x轴，生成新的2维向量
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.RemoveComponent``1(UnityEngine.GameObject)">
+            <summary>
+            移除目标组建
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.RemoveComponent``1(UnityEngine.Component)">
+            <summary>
+            移除目标组建
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToColor(UnityEngine.Vector4)">
+            <summary>
+            ve4 to color
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.colorToVector4(UnityEngine.Color)">
+            <summary>
+            color to ve4
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Remove``1(``0)">
+            <summary>
+            remove this component
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ori"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.IsPositionOn(UnityEngine.UI.MaskableGraphic,UnityEngine.Vector3)">
+            <summary>
+            屏幕坐标中的一点是否在改图形上
+            </summary>
+            <param name="ori"></param>
+            <param name="position"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.CopyFrom(UnityEngine.Transform,UnityEngine.Transform)">
+            <summary>
+            从目标组件，复制到当前组件；
+            世界坐标
+            </summary>
+            <param name="ori"></param>
+            <param name="target"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.toVector3(UnityEngine.Vector2)">
+            <summary>
+            to ve3
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.mapToCanvas(UnityEngine.Vector3,UnityEngine.Canvas)">
+            <summary>
+            
+            </summary>
+            <param name="ori"></param>
+            <param name="targetCanvas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.mapToCanvas(UnityEngine.Vector3,UnityEngine.Canvas,UnityEngine.Canvas)">
+            <summary>
+            把一个屏幕的坐标映射到林外一个屏幕对应的屏幕位置~。
+            </summary>
+            <param name="canvas"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Get``1(UnityEngine.Component,System.String)">
+            <summary>
+            在子集中查找名为name的T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="ori"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.GetInScene``1(UnityEngine.Component,System.String)">
+            <summary>
+            查找类型为T，名字为name 的Unity对象，如果有多个，返回第一个符合条件的结果，否则返回null
+            </summary>
+            <typeparam name="T">组件类型</typeparam>
+            <param name="ori"></param>
+            <param name="name">组件名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.VectorResolved(UnityEngine.Vector2,UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            向量分解，满足 ori = ref.x * nor1 + ref.y * nor2;
+            </summary>
+            <param name="ori">需要分解的向量</param>
+            <param name="nor1">组成A</param>
+            <param name="nor2">组成B</param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Devide(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            
+            </summary>
+            <param name="ori"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Devide_Float(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            magnitude devide
+            </summary>
+            <param name="ori"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.TryInvoke(UnityEngine.Events.UnityAction)">
+            <summary>
+            若事件不为空，则触发
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.TryInvoke``1(UnityEngine.Events.UnityAction{``0},``0)">
+            <summary>
+             若事件不为空，则触发
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="action"></param>
+            <param name="obj"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.TryInvoke``1(UnityEngine.Events.UnityEvent{``0},``0)">
+            <summary>
+            安全触发，如果报空则不执行
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="uevent"></param>
+            <param name="objs"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Abs(UnityEngine.Vector2)">
+            <summary>
+            abs to ve2
+            </summary>
+            <param name="ori"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.abs(UnityEngine.Vector2)">
+            <summary>
+            abs
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.Abs(UnityEngine.Vector3)">
+            <summary>
+            abs
+            </summary>
+            <param name="ori"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.abs(UnityEngine.Vector3)">
+            <summary>
+            abs
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToColor(UnityEngine.Color)">
+            <summary>
+            UnityEngine.Color to System.Drawing.Color
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ToColor(System.Drawing.Color)">
+            <summary>
+            将桌面平台的颜色转换为Unity的颜色
+            </summary>
+            <param name="ori"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ShadowTo(UnityEngine.Vector3,UnityEngine.Vector2)">
+            <summary>
+            the split vector of orgin to direction
+            </summary>
+            <param name="ori"></param>
+            <param name="direction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ShadowTo(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            原向量所在二维平面的投影
+            </summary>
+            <param name="ori">空间向量</param>
+            <param name="x">平面X正方向</param>
+            <param name="y">平面Y正方向</param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.GetLength(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+            ori's length in dir (direction)
+            </summary>
+            <param name="ori"></param>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HinxCor.Unity.Common.MonoHelper.ScreenSize">
+            <summary>
+            screen size
+            </summary>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.GetMousePointRay(UnityEngine.Camera)">
+            <summary>
+            获取当前相机到鼠标位置的射线
+            </summary>
+            <param name="camera"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ParseToVector3(System.String)">
+            <summary>
+            string to ve3
+            </summary>
+            <param name="sVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.LogRExit(System.Object,UnityEngine.LogType,System.Boolean)">
+            <summary>
+            Unity打印数据到控制台，并且退出测试
+            </summary>
+            <param name="massage">打印的数据</param>
+            <param name="logType">报告信息类型</param>
+            <param name="exitOnFinished">是否结束模拟器（仅仅再编辑器模式下运行）</param>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.ParseToVector2(System.String)">
+            <summary>
+            string to ve2
+            </summary>
+            <param name="sVector"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.Common.MonoHelper.isLeftBy(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+            判断向量A是否在向量B左边
+            </summary>
+            <param name="vectora"></param>
+            <param name="vectorb"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
