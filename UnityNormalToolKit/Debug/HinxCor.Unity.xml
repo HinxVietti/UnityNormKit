@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HinxCor.Unity</name>
+    </assembly>
+    <members>
+        <member name="T:HinxCor.Unity.CoroutineHelper">
+            <summary>
+            使用静态方法启动协助程序
+            </summary>
+        </member>
+        <member name="M:HinxCor.Unity.CoroutineHelper.StaticStartCoroutine(System.Collections.IEnumerator)">
+            <summary>
+            使用静态方法启动协助程序
+            </summary>
+            <param name="corutine"></param>
+        </member>
+        <member name="T:HinxCor.Unity.EaseCurve">
+            <summary>
+            恩格尔曲线
+            <para>[0,1]区间积分变量为1的曲线 </para>
+            </summary>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseLinear(System.Single)">
+            <summary>
+            线性
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseInQuad(System.Single)">
+            <summary>
+            IQ
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseOutQuad(System.Single)">
+            <summary>
+            OQ
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseInOutQuad(System.Single)">
+            <summary>
+            IOQ
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseInCubic(System.Single)">
+            <summary>
+            IC
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseOutCubic(System.Single)">
+            <summary>
+            OC
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseInOutCubic(System.Single)">
+            <summary>
+            IOC
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseInQuart(System.Single)">
+            <summary>
+            IQ
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseOutQuart(System.Single)">
+            <summary>
+            OQ
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.EaseInOutQuart(System.Single)">
+            <summary>
+            IOQ
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.ElasticEaseIn(System.Single)">
+            <summary>
+            EEI
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.ElasticEaseOut(System.Single)">
+            <summary>
+            EEO
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HinxCor.Unity.EaseCurve.ElasticEaseInOut(System.Single)">
+            <summary>
+            EEIO
+            </summary>
+            <param name="t"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HinxCor.Unity.Animations.floatTweenClip">
+            <summary>
+            tween single value
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.floatTweenClip.from">
+            <summary>
+            from
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.floatTweenClip.to">
+            <summary>
+            to
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.floatTweenClip.eascingFunction">
+            <summary>
+            speed curve
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.floatTweenClip.handleT">
+            <summary>
+            how to handle with current float value
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.floatTweenClip.duration">
+            <summary>
+            dutween value
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.floatTweenClip.callBack">
+            <summary>
+            on finished callback
+            </summary>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.floatTweenClip.#ctor(System.Single,System.Single,System.Single,System.Func{System.Single,System.Single},System.Action{System.Single},System.Action)">
+            <summary>
+            construct
+            </summary>
+        </member>
+        <member name="T:HinxCor.Unity.Animations.ISumable`1">
+            <summary>
+            sum able
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.ISumable`1.Reduce(`0,`0)">
+            <summary>
+            reduce
+            </summary>
+            <param name="ori"></param>
+            <param name="eas"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HinxCor.Unity.Animations.ITweenClip">
+            <summary>
+            tween clip
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.ITweenClip.duration">
+            <summary>
+            duration of animations
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.ITweenClip.callBack">
+            <summary>
+            call on finished once
+            </summary>
+        </member>
+        <member name="T:HinxCor.Unity.Animations.ITweenClip`1">
+            <summary>
+            T TweenClip
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.ITweenClip`1.from">
+            <summary>
+            from
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.ITweenClip`1.to">
+            <summary>
+            to
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.ITweenClip`1.eascingFunction">
+            <summary>
+            speed curve eqs
+            </summary>
+        </member>
+        <member name="P:HinxCor.Unity.Animations.ITweenClip`1.handleT">
+            <summary>
+            how to animate width t
+            </summary>
+        </member>
+        <member name="T:HinxCor.Unity.Animations.Tweener">
+            <summary>
+            tween animations
+            <para> Condition </para>
+            <para> 1. EasingFunction需要满足积分量为1 </para>
+            </summary>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.Tweener.DoTween(HinxCor.Unity.Animations.floatTweenClip)">
+            <summary>
+            按照float进行Tween动画
+            </summary>
+            <param name="tweenClip"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.Tweener.DoTweenFloat(HinxCor.Unity.Animations.floatTweenClip)">
+            <summary>
+            按照float进行Tween动画
+            </summary>
+            <param name="tweenClip"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.Tweener.DoTween``1(HinxCor.Unity.Animations.ITweenClip{``0},System.Func{System.Single,``0})">
+            <summary>
+            Not implemt
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tweenClip"></param>
+            <param name="curr"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.Tweener.DoTween``1(HinxCor.Unity.Animations.ITweenClip{``0},HinxCor.Unity.Animations.ISumable{``0})">
+            <summary>
+            Not implemt
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="tweenClip"></param>
+            <param name="sumable"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.Tweener.DoTween``1(``0,``0,System.Single,System.Func{``0,``0},System.Action{``0},System.Action)">
+            <summary>
+            Not implemt
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="direction"></param>
+            <param name="easingFunc"></param>
+            <param name="handleT"></param>
+            <param name="callBack"></param>
+        </member>
+        <member name="M:HinxCor.Unity.Animations.Tweener.DoTween(System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+            testing func animate nothing
+            </summary>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="easingFunc"></param>
+            <param name="callback"></param>
+        </member>
+    </members>
+</doc>
